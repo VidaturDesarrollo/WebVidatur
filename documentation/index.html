@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" view-mode="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Shared on THEMELOCK.COM - Touria - Tour & Travel Booking HTML Template | Documentation</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header-area shadow-sm border-bottom bg-white">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-6">
+                    <div class="logo">
+                        <img src="assets/img/logo2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="buy-now-btn text-end">
+                        <a href="#" target="_blank" class="btn btn-success fz-14 fw-bold">Purchase
+                            Again</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 d-none d-md-block">
+                    <div id="sticker" class="sidenav-wrap bg-white border shadow-sm p-4 rounded-3">
+                        <nav id="onePageNav">
+                            <ul class="ps-0 nav flex-column">
+                                <li><a href="#introduction">Introduction</a></li>
+                                <li><a href="#fileStructure">Files Structure</a></li>
+                                <li><a href="#developementSetup">Development Setup</a>
+                                    <ul class="ps-4">
+                                        <li><a href="#codeEditor">Code Editor</a></li>
+                                        <li><a href="#installation">Installation &amp; Run Gulp</a></li>
+                                        <li><a href="#knowFileType">Know file type </a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#customize">Customize</a>
+                                    <ul class="ps-4">
+                                        <li><a href="#basicCustomization">Basic Customization</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#compliedFiles">Customize with Complied Files</a></li>
+                                <li><a href="#3rdParty">Third Party Plugins Activation</a></li>
+                                <li><a class="mb-0" href="#credits">Credits &amp; Changelog</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-8 col-lg-9">
+                    <h2 class="mb-5 display-6 fw-bold big-title">Development Guide</h2>
+
+                    <!-- Intro -->
+                    <div class="card border-0 mb-5 bg-light" id="introduction">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Documentation - v1.0</span>
+                            <h3 class="mb-4 fw-bold">Touria - Tour & Travel Booking HTML Template</h3>
+
+                            <div class="alert alert-warning mb-0 border-0 border-start border-warning border-5">
+                                <strong class="mb-2 d-inline-block">The Touria is a Static HTML5 Template:</strong>
+                                <br>
+                                We do not provide any documentation or email support on how to integrate with any CMS
+                                (such as WordPress, Joomla, etc.) or frameworks (such as Angular, Vue, React, Laravel
+                                etc.).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Help -->
+                    <div class="card border-0 mb-5 bg-light">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Get Help</h3>
+                            <p>Thank you for purchased our item(s). If you have any questions that are beyond the scope
+                                of this help file, please feel free to email via support page <a class="fw-bold"
+                                    href="https://themeforest.net/user/nano_theme">here</a>.
+                                Thank you so much!</p>
+
+                            <div class="alert alert-info mb-0 border-0 border-start border-info border-5">
+                                In some cases, you may have to wait 2 working days to get an email answer. However, we
+                                will try to answer you as soon as possible. Replies are sometimes delayed due to
+                                multiple emails and time zone variations.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-top w-100 mb-5"></div>
+
+                    <!-- File Structure -->
+                    <div class="card border-0 mb-5 bg-light" id="fileStructure">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Files Structure</h3>
+
+                            <ul class="ps-0 files-structure">
+                                <li><i class="fa fa-folder"></i> Touria
+                                    <ul class="ps-4">
+                                        <li><i class="fa fa-folder"></i> dist <span>(compiled distribution files)</span>
+                                        </li>
+                                        <li class="text-muted"><i class="fa fa-folder"></i> node_modules <span>(npm
+                                                dependencies files. It is NOT included in the downloaded file, this
+                                                folder will be installed automatically when you install npm).</span>
+                                        </li>
+                                        <li><i class="fa fa-folder"></i> src <span>(all source files)</span>
+                                            <ul class="ps-4">
+                                                <li><i class="fa fa-folder"></i> html <span>(all .html files into this
+                                                        folder)</span></li>
+                                                <li><i class="fa fa-folder"></i> scss <span>(all .scss files into this
+                                                        folder)</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><i class="fa fa-folder"></i> static <span>(all static assets)</span>
+                                            <ul>
+                                                <li><i class="fa fa-folder"></i> img <span>(all images)</span></li>
+                                                <li><i class="fa fa-folder"></i> js <span>(all static .js files)</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><i class="fa fa-file"></i> .browerslistrc</li>
+                                        <li><i class="fa fa-file"></i> changelog.txt</li>
+                                        <li><i class="fa fa-file"></i> gulpfile.js</li>
+                                        <li><i class="fa fa-file"></i> license</li>
+                                        <li><i class="fa fa-file"></i> package.json</li>
+                                        <li><i class="fa fa-file"></i> package-lock.json</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-top w-100 mb-5" id="developementSetup"></div>
+
+                    <!-- Code Editor -->
+                    <div class="card border-0 mb-5 bg-light" id="codeEditor">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Code Editor</h3>
+
+                            <p>There are many code editors for web code editing. You can use whatever you want. We
+                                recommend that you use <strong>Visual Studio Code</strong> . Because - this template is
+                                coded using it.</p>
+
+                            <ul class="ps-0">
+                                <li><a class="fz-14" href="http://brackets.io"><i class="fa fa-check"></i> Brackets</a>
+                                </li>
+                                <li><a class="fz-14" href="https://www.sublimetext.com"><i class="fa fa-check"></i>
+                                        Sublime Text</a>
+                                </li>
+                                <li><a class="fz-14" href="https://code.visualstudio.com"><i class="fa fa-check"></i>
+                                        Visual Studio
+                                        Code <span class="badge bg-success">Recommended</span></a></li>
+                                <li><a class="fz-14" href="https://atom.io"><i class="fa fa-check"></i> Atom</a></li>
+                                <li><a class="fz-14" href="https://notepad-plus-plus.org"><i class="fa fa-check"></i>
+                                        Notepad++</a>
+                                </li>
+                                <li><a class="fz-14" href="https://www.jetbrains.com/phpstorm/"><i
+                                            class="fa fa-check"></i> PHP
+                                        Storm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Installation -->
+                    <div class="card border-0 mb-5 bg-light" id="installation">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Installation</h3>
+
+                            <div class="alert alert-warning border-0 border-start border-warning border-5">It has a
+                                directory (Touria/dist) of compiled files. If you want to edit without source files
+                                (plain HTML/CSS/JS files), you do not need to install anything on your machine.</div>
+
+                            <p>You need to install package files/dependencies for this project if you want to customize
+                                it. To do this, you must have node and npm installed on your computer. Installation
+                                guide of
+                                the node can be found <a href="https://nodejs.org/en/" target="_blank"
+                                    class="text-primary">here</a>.</p>
+                            <p>As npm comes bundled with a node, a separate installation of npm is NOT needed. If you
+                                have installed them, just go to the root folder and run the following command in your
+                                command
+                                prompt or terminal.</p>
+                            <div class="alert alert-light mb-0 border-0 border-start border-primary border-5 shadow-sm">
+                                npm install</div>
+                        </div>
+                    </div>
+
+                    <!-- Gulp -->
+                    <div class="card border-0 mb-5 bg-light">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Run Gulp</h3>
+                            <p>Run a command to run Gulp. When you run this command, it also watching at all source and
+                                static files. So, you don't need to run another command to watching these.</p>
+                            <div class="alert alert-light border-0 border-start border-primary border-5 shadow-sm">
+                                npm run dev</div>
+                            <p>If you want, just watch the source files. You can run another individual command.</p>
+                            <div class="alert alert-light border-0 border-start border-primary border-5 shadow-sm">
+                                npm run dev watch</div>
+                        </div>
+                    </div>
+
+                    <!-- File Types -->
+                    <div class="card border-0 mb-5 bg-light" id="knowFileType">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Know the file type</h3>
+
+                            <h6 class="fw-bold">Source files:</h6>
+                            <p class="text-muted mb-2 d-block">Source files are files that are processed with template
+                                build tools to make the browser readable. E.g. SCSS &amp; row HTML files always source
+                                files.
+                            </p>
+                            <p class="fz-14 d-inline-block mb-4">Files location: <code
+                                    class="ms-2 bg-white rounded-3 px-2 fz-14 py-1 shadow-sm">Touria > "src"
+                                    folder</code></p>
+
+                            <h6 class="fw-bold">Compiled files:</h6>
+                            <p class="text-muted mb-2 d-block">Compiled files are files generated as a result of running
+                                a compilation process in the source files. E.g. CSS &amp; standard HTML files always
+                                compiled files.</p>
+                            <p class="fz-14 d-inline-block mb-4">Files location: <code
+                                    class="ms-2 bg-white rounded-3 px-2 fz-14 py-1 shadow-sm">Touria > "dist"
+                                    folder</code></p>
+
+                            <h6 class="fw-bold">Static files:</h6>
+                            <p class="text-muted mb-2">Static files are ones that aren't processed or generated. E.g.
+                                Images, Web Icon Fonts and standard HTML are static files.</p>
+                            <p class="fz-14 d-inline-block mb-0">Files location:
+                                <code class="ms-2 bg-white rounded-3 px-2 fz-14 py-1 shadow-sm">Touria > "static"
+                                    folder</code></p>
+                        </div>
+                    </div>
+
+                    <div class="border-top w-100 mb-5" id="customize"></div>
+
+                    <!-- Title and Favicon -->
+                    <div class="card border-0 mb-5 bg-light" id="basicCustomization">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">How to edit the <span class="text-primary">Title &amp;
+                                    Favicon?</span></h3>
+                            <p class="mb-2">Open the mail file (Touria) in your code editor. Then open <code
+                                    class="bg-white px-2 py-1 shadow-sm rounded-3">index.html</code> file &amp;
+                                customize
+                                as your desire.</p>
+                            <p>File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria > src > html
+                                    >
+                                    index.html</code></p>
+                            <img class="img-thumbnail mb-3" src="assets/img/title.png" alt="">
+
+                            <h5 class="mb-3">Customize with Complied Files</h5>
+                            <p class="mb-2">Open any <code class="bg-white px-2 py-1 shadow-sm rounded-3">*.html</code>
+                                file &amp; customize as your desire.</p>
+                            <p>File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria > dist >
+                                    *.html</code></p>
+
+                            <div class="alert alert-primary mb-0 border-0 border-start border-primary border-5">
+                                Remember: The page you will edit, the change will be only that page. So, you need to
+                                edit all the HTML files.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logo -->
+                    <div class="card border-0 mb-5 bg-light">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">How to edit the <span class="text-primary">Brand Logo?</span></h3>
+                            <p class="mb-2">Open the mail file (Touria) in your code editor. Then open <code
+                                    class="bg-white px-2 py-1 shadow-sm rounded-3">index.html</code> file
+                                &amp; customize as your desire.</p>
+                            <p>File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria > src > html
+                                    >
+                                    index.html</code></p>
+                            <img class="img-thumbnail mb-3" src="assets/img/logo.png" alt="">
+
+                            <h5 class="mb-3">Customize with Complied Files</h5>
+                            <p class="mb-2">Open any <code class="bg-white px-2 py-1 shadow-sm rounded-3">*.html</code>
+                                file &amp; customize as your desire.</p>
+                            <p>File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria > dist >
+                                    *.html</code></p>
+
+                            <div class="alert alert-primary mb-0 border-0 border-start border-primary border-5">
+                                Remember: The page you will edit, the change will be only that page. So, you need to
+                                edit all the HTML files.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Nav -->
+                    <div class="card border-0 mb-5 bg-light">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">How to edit the <span class="text-primary">Footer Nav?</span></h3>
+                            <p class="mb-2">Open the mail file (Touria) in your code editor. Then open <code
+                                    class="bg-white px-2 py-1 shadow-sm rounded-3">index.html</code> file &amp;
+                                customize as your desire.</p>
+                            <p>File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria > src > html
+                                    >
+                                    index.html</code></p>
+                            <img class="img-thumbnail mb-3" src="assets/img/footer-nav.png" alt="">
+
+                            <h5 class="mb-3">Customize with Complied Files</h5>
+                            <p class="mb-2">Open any <code class="bg-white px-2 py-1 shadow-sm rounded-3">*.html</code>
+                                file &amp; customize as your desire.</p>
+                            <p>File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria > dist >
+                                    *.html</code></p>
+                            <div class="alert alert-primary mb-0 border-0 border-start border-primary border-5">
+                                Remember: The page you will edit, the change will be only that page. So, you need to
+                                edit all the HTML files.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colors -->
+                    <div class="card border-0 mb-5 bg-light">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">How to edit the template <span class="text-primary">Colors?</span>
+                            </h3>
+                            <p class="mb-2">Open the mail file (Touria) in your code editor. Then open <code
+                                    class="bg-white px-2 py-1 shadow-sm rounded-3">_colors.scss</code> file &amp;
+                                customize as your desire.</p>
+                            <p>File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria > src > scss
+                                    >
+                                    _colors.scss</code></p>
+                            <img class="img-thumbnail mb-3" src="assets/img/color.png" alt="">
+
+                            <h5 class="mb-3">Customize with Complied Files</h5>
+                            <p class="mb-2">Open <code class="bg-white px-2 py-1 shadow-sm rounded-3">style.css</code>
+                                file &amp; customize as your desire.</p>
+                            <p class="mb-0">File location: <code class="bg-white px-2 py-1 shadow-sm rounded-3">Touria
+                                    >
+                                    dist > style.css</code></p>
+                        </div>
+                    </div>
+
+                    <div class="border-top w-100 mb-5"></div>
+
+                    <!-- Customize with Complied Files -->
+                    <div class="card border-0 mb-5 bg-light" id="compliedFiles">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Customize with Complied Files</h3>
+                            <p class="mb-4">Working with compiled files is very easy. You don't need any build tools or
+                                local setup to edit the template. A folder (Touria/dist) is already provided with the
+                                template. Open this folder and edit it as your desired.</p>
+
+                            <div class="alert alert-danger mb-0 border-0 border-start border-danger border-5">
+                                <div class="text-content">
+                                    <h6>Recompiling will overwrite your all changes!</h6>
+                                    <p class="mb-0">When you will customize with compile files, please do not run the
+                                        template build tools. If you run the template build tools again, all your
+                                        changes will be overwritten.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-top w-100 mb-5"></div>
+
+                    <!-- Third Party Plugins -->
+                    <div class="card border-0 mb-5 bg-light" id="3rdParty">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Third Party Plugins Activation</h3>
+                            <div class="table-responsive">
+                                <table class="table-files-structure table table-bordered mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Plugins Activation Code</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>Rotating Image</th>
+                                            <td class="bg-white">
+                                                <pre><code>const rotatingImages = document.querySelectorAll('.rotatingImage');
+
+if (rotatingImages.length > 0) {
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const rotateValue = scrollTop % 360;
+        rotatingImages.forEach(image => {
+            image.style.transform = `rotate(${rotateValue}deg)`;
+        });
+    });
+}
+</code></pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Counter Up</th>
+                                            <td class="bg-white">
+                                                <pre class="mb-0"><code>let counterlen = document.querySelectorAll(".counter").length;
+
+if (counterlen > 0) {
+    let counterUp = window.counterUp.default;
+
+    let callback = entries => {
+        entries.forEach(entry => {
+            let counterElement = entry.target
+            if (entry.isIntersecting && !counterElement.classList.contains('is-visible')) {
+                counterUp(counterElement, {
+                    duration: 2000,
+                    delay: 20
+                });
+                counterElement.classList.add('is-visible');
+            }
+        });
+    }
+
+    let IO = new IntersectionObserver(callback, {
+        threshold: 1
+    });
+
+    let counterUpClass = document.querySelectorAll('.counter');
+    let counterUpClasslen = counterUpClass.length;
+
+    for (let i = 0; i < counterUpClasslen; i++) {
+        IO.observe(counterUpClass[i]);
+    }
+}
+</code></pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Search Form</th>
+                                            <td class="bg-white">
+                                                <pre class="mb-0"><code>const searchButton = document.getElementById('searchButton');
+const searchClose = document.getElementById('searchClose');
+const searchFormPopup = document.querySelector('.search-form-popup');
+const searchOverlay = document.getElementById('searchOverlay');
+
+if (searchButton) {
+    searchButton.addEventListener('click', () => {
+        searchFormPopup.classList.add('open');
+        searchOverlay.classList.add('open');
+    });
+    searchClose.addEventListener('click', () => {
+        searchFormPopup.classList.remove('open');
+        searchOverlay.classList.remove('open');
+    });
+}
+</code></pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-top w-100 mb-5"></div>
+
+                    <!-- Credit -->
+                    <div class="card border-0 mb-5 bg-light" id="credits">
+                        <div class="card-body">
+                            <h3 class="mb-3 fw-bold">Credits</h3>
+
+                            <ul class="ps-0 credits-list">
+                                <li>Framework</li>
+                                <li><a href="https://getbootstrap.com"><i class="fa fa-external-link"></i> Bootstrap 5
+                                    </a></li>
+
+                                <li>Fonts &amp; Icons</li>
+                                <li><a href="https://tabler.io/icons"><i class="fa fa-external-link"></i>
+                                        Tabler Icons</a></li>
+                                <li><a href="https://fonts.google.com"><i class="fa fa-external-link"></i> Google
+                                        Fonts</a></li>
+                                <li><a href="https://iconify.design/"><i class="fa fa-external-link"></i> Iconify</a></li>
+
+                                <li>Images</li>
+                                <li><a href="https://unsplash.com"><i class="fa fa-external-link"></i> Unsplash</a></li>
+                                <li><a href="https://www.freepik.com"><i class="fa fa-external-link"></i> Freepik</a>
+                                </li>
+                                <li><a href="https://www.pexels.com"><i class="fa fa-external-link"></i> Pexels</a>
+                                </li>
+
+                                <li>Plugins</li>
+                                <li><a href="https://github.com/bfintal/Counter-Up2"><i class="fa fa-external-link"></i>
+                                        Counter Up</a></li>
+                                <li><a href="https://swiperjs.com/"><i class="fa fa-external-link"></i> Swiper
+                                        Slider</a></li>
+                                <li><a href="https://github.com/ericbutler555/plain-js-slidetoggle"><i
+                                            class="fa fa-external-link"></i> Slide Toggle</a></li>
+
+                                <li>Maps</li>
+                                <li><a href="https://www.google.com/maps/"><i class="fa fa-external-link"></i> Google
+                                        Maps</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Changelog(s) -->
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <h3 class="mb-4 fw-bold">Changelog(s)</h3>
+
+                            <h6 class="fw-bold">Version 1.0.0</h6>
+                            <ul class="ps-0 fz-14 changelog-list">
+                                <li>Initial Release</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/one-page-nav.js"></script>
+    <script src="assets/js/active.js"></script>
+</body>
+
+</html>

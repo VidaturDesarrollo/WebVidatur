@@ -1,0 +1,167 @@
+@use 'rs';
+@use 'color';
+
+/* Team CSS */
+
+.team-card {
+    position: relative;
+    z-index: 1;
+    transition-duration: 350ms;
+
+    img {
+        width: 100%;
+        border-radius: 18px;
+        transition-duration: 350ms;
+    }
+
+    h4 {
+        transition-duration: 350ms;
+    }
+
+    .team-thumb {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 18px;
+
+        .team-social {
+            position: absolute;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: color.$white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition-duration: 350ms;
+
+            a {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font-size: 18px;
+                color: color.$white;
+                background-color: color.$warning-hover;
+                border: 1px solid color.$warning;
+                transition: all 350ms ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover,
+                &:focus {
+                    background-color: color.$warning;
+                    border-color: color.$warning;
+                    color: color.$white;
+                }
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        transform: translateY(-8px);
+
+        .team-social {
+            bottom: 20px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        h4 {
+            color: color.$warning;
+        }
+    }
+}
+
+.guider-details-section {
+    img {
+        width: 100%;
+        border-radius: 18px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    ul {
+        li {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.9;
+        }
+    }
+
+    .social-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 40px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: color.$secondary;
+            border-radius: 6px;
+            font-size: 20px;
+            color: color.$heading;
+            transition: all 350ms ease;
+
+            &:hover,
+            &:focus {
+                background-color: color.$success;
+                color: color.$white;
+            }
+        }
+    }
+}
+
+.experience-info {
+    p {
+        font-size: 16px;
+        opacity: 0.9;
+
+        @media #{rs.$bp-lg} {
+            font-size: 18px;
+        }
+    }
+
+    .progress-item {
+        .progress-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: color.$heading;
+
+            @media #{rs.$bp-lg} {
+                font-size: 18px;
+            }
+        }
+
+        .progress {
+            width: 100%;
+            height: 10px;
+            border-radius: 2px;
+            background: rgba(60, 179, 113, 0.50);
+        }
+
+        .progress-bar {
+            border-radius: 2px;
+            background: color.$success;
+        }
+    }
+}

@@ -1,0 +1,233 @@
+@use 'rs';
+@use 'color';
+
+/* Contact CSS */
+
+.have-question-card {
+    border-radius: 18px;
+    background: color.$secondary;
+    padding: 40px 30px;
+}
+
+.form-control {
+    border-radius: 8px;
+    background: color.$white;
+    height: 50px;
+    font-size: 16px;
+    border: 0;
+    padding: 20px;
+    color: color.$text;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &::placeholder {
+        color: #999;
+    }
+}
+
+.form-select {
+    border-radius: 8px;
+    background: color.$white;
+    height: 50px;
+    font-size: 16px;
+    border: 0;
+    padding: 0 20px;
+    color: color.$text;
+    cursor: pointer;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+textarea {
+    &.form-control {
+        min-height: 130px;
+    }
+}
+
+.contact-card-sm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 18px;
+    background-color: color.$secondary;
+    transition: all 350ms;
+
+    @media #{rs.$bp-lg} {
+        padding: 40px;
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: color.$success;
+        color: color.$white;
+    }
+
+    div> {
+        div {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+
+            @media #{rs.$bp-xl} {
+                font-size: 24px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            opacity: 0.7;
+        }
+    }
+}
+
+.maps-section {
+    background-color: color.$secondary;
+
+    iframe {
+        border: 0 !important;
+        width: 100%;
+        height: 400px;
+
+        @media #{rs.$bp-md} {
+            height: 600px;
+        }
+
+        @media #{rs.$bp-lg} {
+            height: 700px;
+        }
+
+        @media #{rs.$bp-xl} {
+            height: 800px;
+        }
+    }
+}
+
+.contact-section {
+    position: relative;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 80px);
+        background: rgba(22, 25, 32, 0.60);
+
+        @media #{rs.$bp-xl} {
+            height: calc(100% - 92px);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 80px;
+        background-color: color.$white;
+
+        @media #{rs.$bp-xl} {
+            height: 92px;
+        }
+    }
+
+    .contact-form {
+        padding: 40px;
+        background-color: color.$white;
+        border-radius: 18px 18px 0 0;
+
+        .form-group {
+            position: relative;
+            z-index: 1;
+
+            label {
+                position: absolute;
+                top: 11px;
+                right: 13px;
+                z-index: 2;
+                color: color.$text;
+            }
+        }
+
+        .touria-select2 {
+            width: 100%;
+            border-radius: 8px;
+            height: 50px;
+            font-size: 16px;
+            border: 0;
+            padding: 0 20px;
+            line-height: 50px;
+            color: color.$text;
+            font-weight: 400;
+
+            &::after {
+                border-bottom: 2px solid color.$text;
+                border-right: 2px solid color.$text;
+                right: 20px;
+            }
+
+            .list {
+                width: auto;
+            }
+
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+    }
+
+    .submit-btn {
+        padding: 16px 40px;
+        background-color: color.$success;
+        border-radius: 0 0 18px 18px;
+
+        .btn {
+
+            &:hover,
+            &:focus {
+                background-color: color.$heading;
+                color: color.$white;
+            }
+        }
+    }
+}
+
+.contact-page-section {
+    position: relative;
+    z-index: 1;
+
+    @media #{rs.$bp-md} {
+        margin-bottom: 300px;
+    }
+}
+
+.contact-form-wrapper {
+    padding: 30px;
+    border-radius: 18px;
+    margin-top: 50px;
+
+    @media #{rs.$bp-md} {
+        position: absolute;
+        padding: 50px;
+        bottom: -300px;
+        z-index: 100;
+    }
+}

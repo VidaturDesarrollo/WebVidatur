@@ -1,0 +1,37 @@
+{
+  "name": "touria",
+  "version": "1.0.0",
+  "description": "Touria - Tour & Travel Booking HTML Template",
+  "main": "active.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designingworld/touria.git"
+  },
+  "author": "Nano Theme",
+  "license": "SEE LICENSE IN <license>",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "browserslist": "^4.21.4",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-postcss": "^10.0.0",
+    "postcss": "^8.4.38",
+    "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "@tabler/icons-webfont": "^3.31.0",
+    "bootstrap": "^5.3.3",
+    "counterup2": "^2.0.2",
+    "flatpickr": "^4.6.13",
+    "imagesloaded": "^5.0.0",
+    "isotope-layout": "^3.0.6",
+    "nice-select2": "^2.3.1",
+    "nouislider": "^15.8.1",
+    "swiper": "^11.1.14",
+    "venobox": "^2.1.8",
+    "wowjs": "^1.1.3"
+  }
+}
