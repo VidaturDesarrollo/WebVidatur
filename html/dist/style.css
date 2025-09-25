@@ -2347,8 +2347,6 @@ picture.jarallax-img img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, color-stop(8.81%, #161920), color-stop(99.92%, rgba(22, 25, 32, 0.06)));
-  background: linear-gradient(90deg, #161920 8.81%, rgba(22, 25, 32, 0.06) 99.92%);
   z-index: 10;
 }
 
@@ -8271,4 +8269,12 @@ textarea.form-control {
           transform: translateY(-50%);
   font-family: "tabler-icons";
   font-size: 16px;
+}
+
+.invisible-text {
+    /* Hace que el texto sea completamente transparente */
+    color: transparent !important;
+    
+    /* Si el texto tiene alguna sombra, esto la quita */
+    text-shadow: none !important; 
 }
